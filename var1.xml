@@ -1,1 +1,72 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="led_select" id="9" inline="true" x="-71" y="11">
+    <field name="ACTION">ON</field>
+    <next>
+      <block type="variables_set" id="47" inline="true">
+        <field name="VAR">i</field>
+        <value name="VALUE">
+          <block type="math_number" id="60">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="controls_repeat" id="16" inline="true">
+            <value name="TIMES">
+              <block type="math_number" id="23">
+                <field name="NUM">7</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="oled_setcursor" id="38" inline="true">
+                <value name="STARTX">
+                  <block type="math_number" id="45">
+                    <field name="NUM">10</field>
+                  </block>
+                </value>
+                <value name="STARTY">
+                  <block type="variables_get" id="67">
+                    <field name="VAR">i</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="oled_drawtext" id="161">
+                    <field name="TEXT"></field>
+                    <next>
+                      <block type="oled_drawnumber" id="170" inline="true">
+                        <value name="NUMBER">
+                          <block type="variables_get" id="152">
+                            <field name="VAR">i</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="135" inline="true">
+                            <field name="VAR">i</field>
+                            <value name="VALUE">
+                              <block type="math_arithmetic" id="178" inline="true">
+                                <field name="OP">ADD</field>
+                                <value name="A">
+                                  <block type="variables_get" id="171">
+                                    <field name="VAR">i</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="148">
+                                    <field name="NUM">10</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
