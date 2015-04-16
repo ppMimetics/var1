@@ -1,6 +1,5 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="led_select" id="9" inline="true" x="-71" y="11">
-    <field name="ACTION">ON</field>
+  <block type="oled_cleardisplay" id="195" x="-78" y="53">
     <next>
       <block type="variables_set" id="47" inline="true">
         <field name="VAR">i</field>
@@ -30,7 +29,7 @@
                 </value>
                 <next>
                   <block type="oled_drawtext" id="161">
-                    <field name="TEXT"></field>
+                    <field name="TEXT">i = </field>
                     <next>
                       <block type="oled_drawnumber" id="170" inline="true">
                         <value name="NUMBER">
